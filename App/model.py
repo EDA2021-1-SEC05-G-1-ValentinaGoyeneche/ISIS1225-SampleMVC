@@ -71,3 +71,19 @@ def createTagList():
     """
     taglist = lt.newList(datastructure='SINGLE_LINKED')
     return taglist
+
+def addBooksTags(booksTagslist, bookTag):
+    """
+    Para procesar el archivo de book_tags vamos a usar de otra forma la lista.
+    En este caso, agregaremos cada linea del archivo a la lista, en lugar
+    de usar la opcion de crearla con el nombre del archivo.
+    """
+    lt.addLast(booksTagslist, bookTag)
+
+def createBooksTagsList():
+    """
+    Esta función crea una lista vacía. En esta lista se guardara la
+    información del archivo book_tags
+    """
+    booksTagsList = lt.newList(datastructure='SINGLE_LINKED')
+    return booksTagsList
