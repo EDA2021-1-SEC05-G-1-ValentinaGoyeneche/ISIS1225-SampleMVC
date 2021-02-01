@@ -54,6 +54,13 @@ def loadTags(filename):
 
 def loadBooksTags(catalog):
     """
-    TODO
+    Carga todos los libros con su repectivo Tag(identificador)
     """
-    pass
+    booksTags = cf.data_dir + catalog
+    input_file = csv.DictReader(open(booksTags, encoding='utf-8'))
+    booksTagsList = model.createBooksTagsList()
+    for bookTag in input_file:
+        model.addBooksTags(booksTagsList, bookTag)
+    return booksTagsList
+    
+    
